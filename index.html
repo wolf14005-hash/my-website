@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>مدرسة الخضراء للتعليم الأساسي</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <!-- CSS الرئيسي -->
+  <link href="css/style.css" rel="stylesheet" />
+
+  <style>
+    html,body{font-family:'Cairo',system-ui,-apple-system,Segoe UI,Roboto}
+    .container-std{max-width:1200px}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+  <!-- ======= شريط علوي ======= -->
+  <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-200">
+    <div class="container mx-auto container-std px-4">
+      <nav class="h-16 flex items-center justify-between">
+        <!-- الشعار والعنوان -->
+        <a href="#home" data-route="home" class="flex items-center gap-3 nav-link">
+          <img src="image/logo.png" alt="شعار المدرسة" class="w-12 h-12 rounded-2xl object-cover shadow" />
+          <span class="flex flex-col">
+            <strong id="brandTitle" class="text-xl md:text-2xl">مدرسة الخضراء للتعليم الأساسي</strong>
+            <small class="text-gray-600">التميز في التعليم</small>
+          </span>
+        </a>
+
+        <!-- روابط سطح المكتب -->
+        <ul class="hidden md:flex items-center gap-6">
+          <li><a href="#home" data-route="home" class="hover:text-indigo-600 nav-link">الرئيسية</a></li>
+          <li><a href="#about" data-route="about" class="hover:text-indigo-600 nav-link">عن المدرسة</a></li>
+          <li><a href="#contact" data-route="contact" class="hover:text-indigo-600 nav-link">اتصل بنا</a></li>
+        </ul>
+
+        <!-- أزرار التحكم -->
+        <div class="flex items-center gap-2">
+          <button id="backButton" class="hidden md:inline-flex items-center gap-2 px-3 h-10 rounded-lg border text-sm hover:bg-gray-50">
+            <i class="fas fa-arrow-right"></i><span>رجوع</span>
+          </button>
+          <button id="mobileMenuToggle" class="md:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border hover:bg-gray-50" aria-label="قائمة الجوال">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- قائمة الجوال -->
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200 bg-white" data-open="false">
+      <div class="container mx-auto container-std px-4 py-3">
+        <ul class="grid gap-2 text-sm">
+          <li><a href="#home" data-route="home" class="block px-3 py-2 rounded hover:bg-gray-50">الرئيسية</a></li>
+          <li><a href="#about" data-route="about" class="block px-3 py-2 rounded hover:bg-gray-50">عن المدرسة</a></li>
+          <li><a href="#contact" data-route="contact" class="block px-3 py-2 rounded hover:bg-gray-50">اتصل بنا</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======= الصفحات ======= -->
+  <main>
+<!-- الصفحة: الرئيسية -->
+<section data-page="home" class="block">
+  <!-- Hero -->
+  <div class="relative overflow-hidden hero">
+    <!-- خلفية متدرجة الألوان -->
+    <div class="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500"></div>
+
+    <div class="relative z-10">
+      <div class="container mx-auto container-std px-4">
+        <div class="min-h-[60vh] md:min-h-[68vh] grid place-items-center text-center text-white py-16">
+          <div class="max-w-3xl">
+            <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+              نبني جيل المستقبل بالعلم والمعرفة والإبداع
+            </h1>
+            <p class="mt-4 text-lg md:text-xl text-white/90">
+              بيئة تعليمية محفزة تجمع بين الأصالة والمعاصرة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div><!-- /Hero -->
+
+
+      <!-- جائزة أوميفكو (مختصر) -->
+      <div class="container mx-auto container-std px-4 py-14">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold">جائزة أوميفكو للإبداع المدرسي</h2>
+          <p class="text-gray-600 mt-2">تكريم الإبداع والتميز في التعليم</p>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- بطاقة: القيادة والتخطيط -->
+          <article class="bg-white rounded-2xl border shadow-sm p-5 card">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 items-center justify-center text-white">
+                  <i class="fas fa-crown"></i>
+                </span>
+                <div>
+                  <h3 class="font-bold">القيادة والتخطيط  <br>المدرسي</h3>
+                  <small class="text-gray-500">وزن: 25%</small>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-600 mt-4 text-sm">قيادة فعالة وتخطيط استراتيجي متميز.</p>
+
+            <button
+              class="mt-4 w-full h-11 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700"
+              type="button"
+              data-toggle="criteria"
+              data-target="#criteria-leadership"
+              aria-expanded="false"
+            >
+              عرض المؤشرات
+            </button>
+
+            <div id="criteria-leadership" class="mt-4 rounded-2xl border bg-gray-50 p-4 hidden">
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> فاعلية القيادة — 13.75%</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> خطة المدرسة وارتباطها مع الخطط الأخرى — 11.25%</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- بطاقة: التنظيم الإداري -->
+          <article class="bg-white rounded-2xl border shadow-sm p-5 card">
+            <div class="flex items-center justify_between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex w-12 h-12 rounded-xl bg-gradient-to-br from-sky-500 to-cyan-600 items-center justify-center text-white">
+                  <i class="fas fa-cogs"></i>
+                </span>
+                <div>
+                  <h3 class="font-bold">التنظيم <br> الإداري</h3>
+                  <small class="text-gray-500">وزن: 20%</small>
+                </div>
+              </div>            </div>
+
+            <p class="text-gray-600 mt-4 text-sm">تنظيم إداري فعال ومتطور.</p>
+
+            <button
+              class="mt-4 w-full h-11 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700"
+              type="button"
+              data-toggle="criteria"
+              data-target="#criteria-admin"
+              aria-expanded="false"
+            >
+              عرض المؤشرات
+            </button>
+
+            <div id="criteria-admin" class="mt-4 rounded-2xl border bg-gray-50 p-4 hidden">
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> المجالس واللجان والفرق — 2.5%</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> الأمن والسلامة — 12.5%</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> القوانين واللوائح — 5%</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- بطاقة: جودة الأداء المدرسي -->
+          <article class="bg-white rounded-2xl border shadow-sm p-5 card">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 items-center justify-center text-white">
+                  <i class="fas fa-star"></i>
+                </span>
+                <div>
+                  <h3 class="font-bold">جودة الأداء<br> المدرسي</h3>
+                  <small class="text-gray-500">وزن: 42.5%</small>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-600 mt-4 text-sm">تميّز في الأداء التعليمي والتربوي.</p>
+
+            <button
+              class="mt-4 w-full h-11 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700"
+              type="button"
+              data-toggle="criteria"
+              data-target="#criteria-quality"
+              aria-expanded="false"
+            >
+              عرض المؤشرات
+            </button>
+
+            <div id="criteria-quality" class="mt-4 rounded-2xl border bg-gray-50 p-4 hidden">
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> تطوير أداء الهيئة التعليمية — 12.5%</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> التحصيل الدراسي — 13.75%</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> الأنشطة والرعاية الطلابية — 16.25%</li>
+              </ul>
+            </div>
+          </article>
+
+          <!-- بطاقة: الشراكة المجتمعية -->
+          <article class="bg-white rounded-2xl border shadow-sm p-5 card">
+            <div class="flex items-center justify-between gap-3">
+              <div class="flex items-center gap-3">
+                <span class="inline-flex w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 items-center justify-center text-white">
+                  <i class="fas fa-handshake"></i>
+                </span>
+                <div>
+                  <h3 class="font-bold">الشراكة<br> المجتمعية</h3>
+                  <small class="text-gray-500">وزن: 12.5%</small>
+                </div>
+              </div>
+            </div>
+
+            <p class="text-gray-600 mt-4 text-sm">تعاون فعّال مع المجتمع المحلي.</p>
+
+            <button
+              class="mt-4 w-full h-11 rounded-xl bg-indigo-600 text-white font-semibold hover:bg-indigo-700"
+              type="button"
+              data-toggle="criteria"
+              data-target="#criteria-partnership"
+              aria-expanded="false"
+            >
+              عرض المؤشرات
+            </button>
+
+            <div id="criteria-partnership" class="mt-4 rounded-2xl border bg-gray-50 p-4 hidden">
+              <ul class="space-y-2 text-sm">
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> الشراكة مع أولياء الأمور</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> التعاون مع المؤسسات المحلية</li>
+                <li class="flex items-start gap-2"><i class="fa-solid fa-check text-emerald-600 mt-0.5"></i> خدمة المجتمع والمبادرات</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- الأنشطة والفعاليات -->
+      <div class="container mx-auto container-std px-4 pb-16">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-extrabold">الأنشطة والفعاليات</h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- بطاقة 1 -->
+          <article class="bg-white rounded-2xl border shadow-sm overflow-hidden activity-card">
+            <img src="image/1.jpg" class="w-full h-40 object-cover" alt="اجتماع الأخصائيات مع الطالبات المشاركات في مسابقة القراءة الوطنية" />
+            <div class="p-5">
+              <h3 class="font-bold">اجتماع أخصائية مصادر التعلم وأخصائية الأنشطة المدرسية</h3>
+              <p class="text-sm text-gray-600 mt-2">
+                لقاء مع الطالبات المشاركات في <strong>مسابقة القراءة الوطنية</strong> لشرح آلية المشاركة وتوزيع المهام.
+              </p>
+            </div>
+          </article>
+
+          <!-- بطاقة 2 -->
+          <article class="bg-white rounded-2xl border shadow-sm overflow_hidden activity-card">
+            <img src="image/2.jpg" class="w-full h-40 object-cover" alt="جلسة كتاب وفنجان من القهوة بمناسبة يوم المكتبة المدرسية" />
+            <div class="p-5">
+              <h3 class="font-bold">جلسة «كتاب وفنجان من القهوة»</h3>
+              <p class="text-sm text-gray-600 mt-2">
+                فعالية قرائية بمناسبة <strong>يوم المكتبة المدرسية</strong> تتضمن نقاشات مفتوحة حول الكتب وتجارب القراءة.
+              </p>
+            </div>
+          </article>
+
+          <!-- بطاقة 3 -->
+          <article class="bg-white rounded-2xl border shadow-sm overflow-hidden activity-card">
+            <img src="image/3.jpg" class="w-full h-40 object-cover" alt="بدء المسابقة الثقافية العُمانية في مدرسة الخضراء" />
+            <div class="p-5">
+              <h3 class="font-bold">انطلاق الجولة الأولى من المسابقة الثقافية العُمانية</h3>
+              <p class="text-sm text-gray-600 mt-2">
+                ينفذها فريق <strong>هنا عُمان</strong> في مدرسة الخضراء للتعليم الأساسي بالتعاون مع اللجنة الثقافية التابعة لفريق الخضراء.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+    </section> <!-- /home -->
+
+    <!-- الصفحة: عن المدرسة -->
+    <section data-page="about" class="hidden">
+      <div class="container mx-auto container-std px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-6">عن المدرسة</h2>
+        <div class="grid lg:grid-cols-2 gap-8">
+          <div class="bg-white rounded-2xl border p-6">
+            <h3 class="font-bold mb-3">الرؤية</h3>
+            <p class="text-gray-700">أن نكون المدرسة الرائدة في تقديم تعليم متميز يعد جيلاً مبدعاً قادرًا على مواجهة تحديات المستقبل.</p>
+          </div>
+          <div class="bg-white rounded-2xl border p-6">
+            <h3 class="font-bold mb-3">الرسالة</h3>
+            <p class="text-gray-700">توفير بيئة تعليمية محفزة ومتطورة تنمي قدرات الطلاب الأكاديمية والشخصية وتعزز قيم المواطنة والإبداع.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الصفحة: الأخبار -->
+    <section data-page="news" class="hidden">
+      <div class="container mx-auto container-std px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-6">الأخبار والفعاليات</h2>
+
+        <div class="grid lg:grid-cols-3 gap-6">
+          <article class="lg:col-span-2 bg-white rounded-2xl border shadow-sm overflow-hidden card">
+            <img src="https://via.placeholder.com/1200x420/3b82f6/ffffff?text=%D8%AE%D8%A8%D8%B1+%D9%85%D9%85%D9%8A%D8%B2" class="w-full h-56 object-cover" alt="خبر" />
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-2 text-sm text-gray-500">
+                <span>أخبار</span><span>2025-01-15</span>
+              </div>
+              <h3 class="font-bold text-lg">افتتاح مختبر علمي متطور</h3>
+              <p class="text-gray-700 mt-2">تم تجهيز المختبر بأحدث الأجهزة لدعم التعلم العملي للطلاب.</p>
+            </div>
+          </article>
+
+          <aside class="space-y-6">
+            <div class="bg-white rounded-2xl border shadow-sm p-5">
+              <h4 class="font-bold mb-3">الفعاليات القادمة</h4>
+              <ul class="space-y-3 text-sm">
+                <li class="flex items-center gap-2"><i class="fa-regular fa-calendar text-amber-600"></i> معرض العلوم — 2025-02-15</li>
+                <li class="flex items-center gap-2"><i class="fa-regular fa-calendar text-amber-600"></i> يوم الرياضة — 2025-02-20</li>
+                <li class="flex items-center gap-2"><i class="fa-regular fa-calendar text-amber-600"></i> مهرجان الثقافة والفنون — 2025-03-05</li>
+              </ul>
+            </div>
+
+            <div class="bg-white rounded-2xl border shadow-sm p-5 quick-links">
+              <h4 class="font-bold mb-3">روابط سريعة</h4>
+              <ul class="space-y-2 text-sm">
+                <li><a href="#" class="hover:text-indigo-600">دليل الطالب</a></li>
+                <li><a href="#" class="hover:text-indigo-600">التقويم الأكاديمي</a></li>
+                <li><a href="#" class="hover:text-indigo-600">المكتبة الرقمية</a></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- الصفحة: اتصل بنا -->
+    <section data-page="contact" class="hidden">
+      <div class="container mx-auto container-std px-4 py-14">
+        <h2 class="text-2xl md:text-3xl font-extrabold mb-6">اتصل بنا</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="bg-white rounded-2xl border shadow-sm p-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex w-12 h-12 rounded-xl bg-indigo-600 text-white items-center justify-center"><i class="fa-solid fa-phone"></i></span>
+              <div>
+                <div class="font-bold">الهاتف</div>
+                <div class="text-gray-600">+9899087804</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl border shadow-sm p-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex w-12 h-12 rounded-xl bg-amber-500 text-white items-center justify-center"><i class="fa-solid fa-envelope"></i></span>
+              <div>
+                <div class="font-bold">البريد الإلكتروني</div>
+                <div class="text-gray-600">info@futureschool.edu.sa</div>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white rounded-2xl border shadow-sm p-5">
+            <div class="flex items-center gap-3">
+              <span class="inline-flex w-12 h-12 rounded-xl bg-emerald-600 text-white items-center justify-center"><i class="fa-solid fa-map-marker-alt"></i></span>
+              <div>
+                <div class="font-bold">العنوان</div>
+                <div class="text-gray-600">الشرقية سلطنة عمان</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======= تذييل ======= -->
+  <footer class="border-t bg-white">
+    <div class="container mx-auto container-std px-4 py-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-gray-600">&copy; 2025 مدرسة الخضراء للتعليم الأساسي. جميع الحقوق محفوظة.</p>
+        <div class="flex items-center gap-3">
+          <a href="#" class="w-10 h-10 rounded-lg bg-indigo-600 text-white grid place-items-center hover:bg-indigo-700" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-blue-600 text-white grid place-items-center hover:bg-blue-700" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-pink-600 text-white grid place-items-center hover:bg-pink-700" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="w-10 h-10 rounded-lg bg-red-600 text-white grid place-items-center hover:bg-red-700" aria-label="يوتيوب"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======= مودال عام (اختياري) ======= -->
+  <div id="serviceModal" class="hidden fixed inset-0 z-[60] bg-black/50">
+    <div class="min-h-full w-full grid place-items-center p-4">
+      <div class="w-full max-w-3xl bg-white rounded-2xl shadow-xl overflow-hidden modal-card">
+        <div class="flex items-center justify-between p-4 border-b">
+          <h3 class="font-bold">عنوان النافذة</h3>
+          <button id="closeServiceModal" class="w-10 h-10 grid place-items-center rounded-lg hover:bg-gray-100" aria-label="إغلاق">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <div class="p-6">محتوى النافذة هنا…</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= مودال الفيديو عند فتح الصفحة ======= -->
+  <div id="introVideoModal" class="fixed inset-0 z-[80] hidden">
+    <div class="absolute inset-0 bg-black/60 backdrop-blur-sm"></div>
+    <div class="relative min-h-full w-full grid place-items-center p-4">
+      <div class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl">
+        <button type="button" id="introVideoClose" class="absolute top-2 left-2 z-10 w-10 h-10 grid place-items-center rounded-lg bg-white/90 text-gray-800 hover:bg-white" aria-label="إغلاق الفيديو" title="إغلاق">
+          <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <button type="button" id="introVideoFullscreen" class="absolute top-2 left-14 z-10 w-10 h-10 grid place-items-center rounded-lg bg-white/90 text-gray-800 hover:bg-white" aria-label="ملء الشاشة" title="ملء الشاشة">
+          <i class="fa-solid fa-up-right-and-down-left-from-center text-lg"></i>
+        </button>
+        <video id="introVideo" class="block w-full h-auto" playsinline autoplay muted controls></video>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= ملف JS ======= -->
+  <script src="js/main.js"></script>
+</body>
+</html>
